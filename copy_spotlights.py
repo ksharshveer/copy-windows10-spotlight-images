@@ -32,8 +32,10 @@ def copy_spotlights_images(spotlights_dir, save_dir, split=True, filter_res=1920
     complete_portrait_path = path.join(save_dir, dir_port)
 
     # make directories if they don't exist already
-    makedirs(complete_landscape_path)
-    makedirs(complete_portrait_path)
+    if not path.isdir(complete_landscape_path):
+      makedirs(complete_landscape_path)
+    if not path.isdir(complete_portrait_path):
+      makedirs(complete_portrait_path) 
 
   for spotlight in listdir(spotlights_dir):
     sl = path.join(spotlights_dir, spotlight)
@@ -62,4 +64,5 @@ if __name__ == "__main__":
     split = False
 
   copy_spotlights_images(SPOTLIGHT_DIR, save_dir, split)
+  
   
