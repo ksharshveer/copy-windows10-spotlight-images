@@ -5,8 +5,9 @@ from sys import argv, exit
 
 
 def copy_spotlights_images(spotlights_dir, save_dir, split=True, filter_res=1920, img_ext=".png", dir_land="landscape", dir_port="portrait"):
+  
   """
-  For windows users, copies beautifull images stored on their machine, called 'Windows Spotlights' to a directory of their choice.
+  For Windows 10 users, copies beautiful images stored on their machine, called 'Windows Spotlights' to a directory of their choice.
 
   Parameters:
     spotlights_dir (str): directory location where windows_spotlights are stored
