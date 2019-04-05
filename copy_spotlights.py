@@ -1,9 +1,10 @@
 from os import path, makedirs, listdir
-# needed to import Path from pathlib because 'HOME' environment variable using os.path returned None on cmd
+# needed to import Path from pathlib because 'HOME' environment variable using os.path returned None on windows command line
 from pathlib import Path
 from shutil import copy
-from PIL import Image
 from argparse import ArgumentParser
+
+from PIL import Image
 
 
 def find_images(dir):
