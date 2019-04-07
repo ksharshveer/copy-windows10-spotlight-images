@@ -1,20 +1,15 @@
-# copy-windows10-spotlight_images
+# copy-windows10-spotlight-images
 Love windows 10 spotlight images that show up on lock-screen. Then here's a simple program to copy those images and get them in your preferred directory.
 
-## Simplified pre-requisites
-Have gitbash, and python with pip installed.
-
-Open gitbash. Install pipenv using pip. Specifically, run <code>$ pip install pipenv</code>
-
-Download this project. You can download by running
-<code>$ git clone https://github.com/DevilLordHarsh/copy-windows10-spotlight_images</code>
-
-Make sure you are in the root of the project, and run
-<code>$ pipenv install</code>
-
+## Installation
+You must have python 3.6 installed and added to class path. Also install gitbash.
+Now, copy all lines in 'setup.sh' file. Open gitbash and paste these lines, and press enter.
 All set!
 
 ## Usage examples
+You can replace "pipenv run python copy_spotlights.py" shown in below images with "get-spotlights"
+For example:
+<br><code>$ get-spotlights -h</code>
 
 ### Help section
 <img src="example-images/help.PNG" width=800>
