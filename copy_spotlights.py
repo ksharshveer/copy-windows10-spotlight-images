@@ -94,5 +94,5 @@ def copy_spotlights_images(spotlights_dir, save_dir, split=True, min_res=1920, d
             else:
                 where = path.normpath(path.join(complete_other_path, save_image_file_name))
 
-        if where != None:
+        if where is not None:
             copy(image_file_full_path, where)
