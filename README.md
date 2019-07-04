@@ -5,7 +5,7 @@ Love windows 10 spotlight images that show up on lock-screen. Then here's a simp
 ## Installation
 Pre-requisites: Python3 installed. python and pip available in PATH<br>
 Open command prompt, and enter the following command -<br>
-<code>pip install git+git://github.com/DevilLordHarsh/copy-windows10-spotlight-images.git</code>
+<code>pip install https://github.com/DevilLordHarsh/copy-windows10-spotlight-images/archive/master.zip</code>
 <br>All set!
 
 ## Usage examples
