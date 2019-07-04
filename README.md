@@ -8,7 +8,7 @@ Open command prompt, and enter the following command -<br>
 <code>pip install https://github.com/DevilLordHarsh/copy-windows10-spotlight-images/archive/master.zip</code>
 <br>All set!
 
-## Usage examples
+## Usage
 Open command prompt, and<br>
 Enter <code>get-spotlights-gui</code> to start the app.
 If default settings seem sound to you, go ahead and click 'Get Spotlights' button.
