@@ -42,7 +42,7 @@ def copy_spotlights_images(spotlights_dir, save_dir, split=True, min_res=1920, d
 
     Keyword Arguments:
       split {bool} -- split images into different folders based on types such as landscape and portrait (default: {True})
-      min_res {int} -- ignore images with horizontal or vertical resolution lower than min_res value,  (default: {1920})
+      min_res {int} -- only include images with width or height greater than or equal to {min_res}
       dir_land {str} -- directory name in which to store landscape images (default: {"landscape"})
       dir_port {str} -- directory name in which to store portrait images (default: {"portrait"})
       dir_other {str} -- directory name in which to store images other than portrait or landscape type (default: {"other"})
@@ -52,6 +52,7 @@ def copy_spotlights_images(spotlights_dir, save_dir, split=True, min_res=1920, d
     """
     if not path.isdir(save_dir):
         raise Exception(f"'{save_dir}' does not seem to be a valid directory!")
+    min_res = int(min_res)
 
     complete_landscape_path, complete_portrait_path, complete_other_path = "", "", ""
 

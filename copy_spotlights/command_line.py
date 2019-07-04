@@ -1,7 +1,7 @@
-from .copy_spotlights import copy_spotlights_images
+#!/usr/bin/env python3
+from copy_spotlights import copy_spotlights_images
 from argparse import ArgumentParser
 from pathlib import Path
-from os import path
 
 
 def main():
@@ -17,8 +17,8 @@ def main():
     args = parser.parse_args()
 
     # Known directory location path where windows stores spotlight images
-    home = str(Path.home())
-    spotlight_dir = path.join(home, 'AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets')
+    home = Path.home()
+    spotlight_dir = Path.joinpath(home, Path('AppData/Local/Packages/Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy/LocalState/Assets'))
 
     save_dir = args.__getattribute__("save_dir")
     split = not args.__getattribute__("no_split")
