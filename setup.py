@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='get-spotlights',
-    version='3.1',
+    version='3.2',
     install_requires='pillow',
     packages=['copy_spotlights'],
     entry_points = {
