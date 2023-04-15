@@ -16,7 +16,7 @@ def find_images(dir):
     Returns:
       list -- list of filenames found in the given directory which are images
     """
-    assert path.isdir(dir)==True
+    assert path.isdir(dir) == True
 
     im_files = []
 
@@ -33,7 +33,15 @@ def find_images(dir):
     return im_files
 
 
-def copy_spotlights_images(spotlights_dir, save_dir, split=True, min_res=1920, dir_land="landscape", dir_port="portrait", dir_other="other"):
+def copy_spotlights_images(
+    spotlights_dir,
+    save_dir,
+    split=True,
+    min_res=1920,
+    dir_land="landscape",
+    dir_port="portrait",
+    dir_other="other",
+):
     """For Windows 10 users, copies beautiful images stored on their machine, called 'Windows Spotlights' to a directory of their choice.
 
     Arguments:
@@ -72,7 +80,11 @@ def copy_spotlights_images(spotlights_dir, save_dir, split=True, min_res=1920, d
 
     else:
         # don't copy spotlight images into different folders
-        complete_landscape_path, complete_portrait_path, complete_other_path = save_dir, save_dir, save_dir
+        complete_landscape_path, complete_portrait_path, complete_other_path = (
+            save_dir,
+            save_dir,
+            save_dir,
+        )
 
     for image_file in find_images(spotlights_dir):
         image_file_full_path = path.normpath(path.join(spotlights_dir, image_file))
@@ -86,14 +98,20 @@ def copy_spotlights_images(spotlights_dir, save_dir, split=True, min_res=1920, d
         im_width, im_height = int(im.size[0]), int(im.size[1])
 
         if im_width >= min_res or im_height >= min_res:
-            if (im_height < im_width):
-                where = path.normpath(path.join(complete_landscape_path, save_image_file_name))
+            if im_height < im_width:
+                where = path.normpath(
+                    path.join(complete_landscape_path, save_image_file_name)
+                )
 
-            elif (im_width < im_height):
-                where = path.normpath(path.join(complete_portrait_path, save_image_file_name))
+            elif im_width < im_height:
+                where = path.normpath(
+                    path.join(complete_portrait_path, save_image_file_name)
+                )
 
             else:
-                where = path.normpath(path.join(complete_other_path, save_image_file_name))
+                where = path.normpath(
+                    path.join(complete_other_path, save_image_file_name)
+                )
 
         if where is not None:
             copy(image_file_full_path, where)
