@@ -41,6 +41,7 @@ def copy_spotlights_images(
     dir_land="landscape",
     dir_port="portrait",
     dir_other="other",
+    skip_existing=False,
 ):
     """For Windows 10 users, copies beautiful images stored on their machine, called 'Windows Spotlights' to a directory of their choice.
 
@@ -114,4 +115,6 @@ def copy_spotlights_images(
                 )
 
         if where is not None:
+            if skip_existing and path.isfile(where):
+                continue
             copy(image_file_full_path, where)
